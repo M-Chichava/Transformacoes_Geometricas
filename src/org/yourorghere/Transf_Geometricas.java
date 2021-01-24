@@ -16,7 +16,7 @@ import javax.media.opengl.glu.GLU;
  * Transf_Geometricas.java <BR>
  * author: Grupo 2
  *
- * This version is equal to Brian Paul's version 1.2 1999/10/21
+ * 
  */
 public class Transf_Geometricas implements GLEventListener {
 
@@ -34,9 +34,7 @@ public class Transf_Geometricas implements GLEventListener {
 
             @Override
             public void windowClosing(WindowEvent e) {
-                // Run this on another thread than the AWT event queue to
-                // make sure the call to Animator.stop() completes before
-                // exiting
+                
                 new Thread(new Runnable() {
 
                     public void run() {
@@ -53,25 +51,25 @@ public class Transf_Geometricas implements GLEventListener {
     }
 
     public void init(GLAutoDrawable drawable) {
-        // Use debug pipeline
-        // drawable.setGL(new DebugGL(drawable.getGL()));
-
+        // Usa o debug de pipeline
+     
         GL gl = drawable.getGL();
         System.err.println("INIT GL IS: " + gl.getClass().getName());
 
-        // Enable VSync
+        // Habilita VSync
         gl.setSwapInterval(1);
 
-        // Setup the drawing area and shading mode
+        // Configura a área de desenho e o modo de sombreamento
+        
         gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-        gl.glShadeModel(GL.GL_SMOOTH); // try setting this to GL_FLAT and see what happens.
+        gl.glShadeModel(GL.GL_SMOOTH); 
     }
 
     public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
         GL gl = drawable.getGL();
         GLU glu = new GLU();
 
-        if (height <= 0) { // avoid a divide by zero error!
+        if (height <= 0) { 
         
             height = 1;
         }
@@ -106,7 +104,7 @@ public class Transf_Geometricas implements GLEventListener {
             gl.glColor3f(0.0f, 0.0f, 1.0f);    // Set the current drawing color to blue
             gl.glVertex3f(1.0f, -1.0f, 0.0f);  // Bottom Right
         
-// Desenho Terminado do Triângulo
+        // Desenho Terminado do Triângulo
 
         gl.glEnd();
 
