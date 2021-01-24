@@ -46,7 +46,7 @@ public class Transf_Geometricas implements GLEventListener {
                 }).start();
             }
         });
-        // Center frame
+        // frame Central
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         animator.start();
@@ -95,7 +95,8 @@ public class Transf_Geometricas implements GLEventListener {
         // Move the "drawing cursor" around
         gl.glTranslatef(-1.5f, 0.0f, -6.0f);
 
-        // Drawing Using Triangles
+        // Desenho de triangulo
+        
         gl.glBegin(GL.GL_TRIANGLES);
             gl.glColor3f(1.0f, 0.0f, 0.0f);    // Set the current drawing color to red
             gl.glVertex3f(0.0f, 1.0f, 0.0f);   // Top
