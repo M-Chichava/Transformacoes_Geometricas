@@ -140,17 +140,18 @@ public class Transf_Geometricas implements GLEventListener {
         
         gl.glEnd();
         
+       gl.glRotatef(90.0f, 0.0f, 2.0f, 0.0f); 
        gl.glTranslatef(-3.0f, -0.4f, 0.0f);
-        // Desenhar um Quadrado
+        // Desenhar um Poligono
         
         gl.glBegin(GL.GL_POLYGON);
             gl.glColor3f(0.5f, 0.5f, 1.0f);    // Set the current drawing color to light blue
-            gl.glVertex3f(-1.0f, 1.0f, 0.0f);  // Top Left
-            gl.glVertex3f(0.0f, 1.0f, 1.0f);
             gl.glVertex3f(1.0f, 1.0f, 0.0f);   // Top Right
+            gl.glColor3f(0.2f, 0.5f, 0.5f); 
             gl.glVertex3f(1.0f, -1.0f, 0.0f);  // Bottom Right
             gl.glVertex3f(-1.0f, -1.0f, 0.0f); // Bottom Left
         // Desenho Terminado do Quadrado
+        
         gl.glEnd();
         
 
