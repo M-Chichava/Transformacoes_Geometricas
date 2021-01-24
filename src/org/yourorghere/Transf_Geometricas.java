@@ -87,12 +87,13 @@ public class Transf_Geometricas implements GLEventListener {
     public void display(GLAutoDrawable drawable) {
         GL gl = drawable.getGL();
 
-        // Clear the drawing area
+        // Limpar a area de desenho
+        
         gl.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
-        // Reset the current matrix to the "identity"
+        // Resenta a actual matriz para "identidade"
         gl.glLoadIdentity();
 
-        // Move the "drawing cursor" around
+        // Move o cursor de desenho
         gl.glTranslatef(-1.5f, 0.0f, -6.0f);
 
         // Desenho de triangulo
@@ -104,7 +105,9 @@ public class Transf_Geometricas implements GLEventListener {
             gl.glVertex3f(-1.0f, -1.0f, 0.0f); // Bottom Left
             gl.glColor3f(0.0f, 0.0f, 1.0f);    // Set the current drawing color to blue
             gl.glVertex3f(1.0f, -1.0f, 0.0f);  // Bottom Right
-        // Finished Drawing The Triangle
+        
+// Desenho Terminado do Triângulo
+
         gl.glEnd();
 
         // Move the "drawing cursor" to another position
