@@ -112,7 +112,10 @@ public class Transf_Geometricas implements GLEventListener {
         gl.glEnd();
 
         // Mover o "cursor de desenho" para outra posição
+       //gl.glScalef(0.5f, 0.8f, 0.0f);
         gl.glTranslatef(3.0f, -1.4f, 0.0f);
+       // gl.glRotatef(45,3.0f, -1.4f, 0f);
+        
         // Desenhar um Quadrado
         
         gl.glBegin(GL.GL_QUADS);
