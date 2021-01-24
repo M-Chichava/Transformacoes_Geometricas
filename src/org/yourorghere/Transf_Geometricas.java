@@ -21,6 +21,8 @@ import javax.media.opengl.glu.GLU;
 public class Transf_Geometricas implements GLEventListener {
 
     public static void main(String[] args) {
+       
+        //Criar Frame
         Frame frame = new Frame("Simple JOGL Application");
         GLCanvas canvas = new GLCanvas();
 
