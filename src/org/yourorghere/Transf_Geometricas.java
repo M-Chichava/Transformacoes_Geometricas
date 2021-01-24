@@ -31,7 +31,7 @@ public class Transf_Geometricas implements GLEventListener {
 
         canvas.addGLEventListener(new Transf_Geometricas());
         frame.add(canvas);
-        frame.setSize(720, 600);
+        frame.setSize(1920, 1080);
         final Animator animator = new Animator(canvas);
         frame.addWindowListener(new WindowAdapter() {
 
@@ -137,9 +137,22 @@ public class Transf_Geometricas implements GLEventListener {
                 gl.glVertex2d(cos(anglo), sin(anglo));
             }
         // Desenho Terminado da Circunferência
+        
         gl.glEnd();
         
-       
+       gl.glTranslatef(-3.0f, -0.4f, 0.0f);
+        // Desenhar um Quadrado
+        
+        gl.glBegin(GL.GL_POLYGON);
+            gl.glColor3f(0.5f, 0.5f, 1.0f);    // Set the current drawing color to light blue
+            gl.glVertex3f(-1.0f, 1.0f, 0.0f);  // Top Left
+            gl.glVertex3f(0.0f, 1.0f, 1.0f);
+            gl.glVertex3f(1.0f, 1.0f, 0.0f);   // Top Right
+            gl.glVertex3f(1.0f, -1.0f, 0.0f);  // Bottom Right
+            gl.glVertex3f(-1.0f, -1.0f, 0.0f); // Bottom Left
+        // Desenho Terminado do Quadrado
+        gl.glEnd();
+        
 
         // Descarrega todas as operações de desenho na placa gráfica
         gl.glFlush();
