@@ -31,7 +31,7 @@ public class Transf_Geometricas implements GLEventListener {
 
         canvas.addGLEventListener(new Transf_Geometricas());
         frame.add(canvas);
-        frame.setSize(640, 480);
+        frame.setSize(720, 600);
         final Animator animator = new Animator(canvas);
         frame.addWindowListener(new WindowAdapter() {
 
@@ -95,7 +95,7 @@ public class Transf_Geometricas implements GLEventListener {
         gl.glLoadIdentity();
 
         // Move o cursor de desenho
-        gl.glTranslatef(-1.5f, 0.0f, -6.0f);
+        gl.glTranslatef(-2.0f, 0.0f, -6.0f);
 
         // Desenho de triangulo
         
@@ -112,7 +112,7 @@ public class Transf_Geometricas implements GLEventListener {
         gl.glEnd();
 
         // Mover o "cursor de desenho" para outra posição
-        gl.glTranslatef(3.0f, 0.0f, 0.0f);
+        gl.glTranslatef(3.0f, -1.4f, 0.0f);
         // Desenhar um Quadrado
         
         gl.glBegin(GL.GL_QUADS);
@@ -124,7 +124,8 @@ public class Transf_Geometricas implements GLEventListener {
         // Desenho Terminado do Quadrado
         gl.glEnd();
         
-        
+        // Mover o "cursor de desenho" para outra posição
+        gl.glTranslatef(0.0f, 2.4f, 0.0f);
         //Desenhar uma Circunferência
         
         gl.glBegin(GL.GL_LINE_LOOP);
@@ -132,6 +133,7 @@ public class Transf_Geometricas implements GLEventListener {
            
             for (byte i = 0; i < pontos; i++) {
             double anglo = 2*PI*i/pontos;
+                gl.glColor3f(0.8f, 0.5f, 1.0f); 
                 gl.glVertex2d(cos(anglo), sin(anglo));
             }
         // Desenho Terminado da Circunferência
