@@ -4,6 +4,9 @@ import com.sun.opengl.util.Animator;
 import java.awt.Frame;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import static java.lang.Math.PI;
+import static java.lang.Math.cos;
+import static java.lang.Math.sin;
 import javax.media.opengl.GL;
 import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLCanvas;
@@ -120,10 +123,24 @@ public class Transf_Geometricas implements GLEventListener {
             gl.glVertex3f(-1.0f, -1.0f, 0.0f); // Bottom Left
         // Desenho Terminado do Quadrado
         gl.glEnd();
+        
+        
+        //Desenhar uma Circunferência
+        
+        gl.glBegin(GL.GL_LINE_LOOP);
+            byte pontos = 100;
+           
+            for (byte i = 0; i < pontos; i++) {
+            double anglo = 2*PI*i/pontos;
+                gl.glVertex2d(cos(anglo), sin(anglo));
+            }
+        // Desenho Terminado da Circunferência
+        gl.glEnd();
 
         // Descarrega todas as operações de desenho na placa gráfica
         gl.glFlush();
     }
+    
 
     public void displayChanged(GLAutoDrawable drawable, boolean modeChanged, boolean deviceChanged) {
     }
