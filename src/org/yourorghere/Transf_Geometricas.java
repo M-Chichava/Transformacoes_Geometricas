@@ -139,7 +139,7 @@ public class Transf_Geometricas implements GLEventListener {
         // Desenho Terminado da Circunferência
         gl.glEnd();
         
-        
+       
 
         // Descarrega todas as operações de desenho na placa gráfica
         gl.glFlush();
